@@ -1,0 +1,111 @@
+Name,Nationality,Sex,Age,Height,Weight,Sport,Gold,Silver,Bronze,BMI
+Aaron Royle,AUS,male,26,1.8,67,triathlon,0,0,0,20.67901235
+Agnieszka Jerzyk,POL,female,28,1.7,59,triathlon,0,0,0,20.41522491
+Ai Ueda,JPN,female,32,1.55,44,triathlon,0,0,0,18.31425598
+Aileen Reid,IRL,female,33,1.69,53,triathlon,0,0,0,18.55677322
+Ainhoa Murua,ESP,female,37,1.6,48,triathlon,0,0,0,18.75
+Alessandro Fabian,ITA,male,28,1.86,77,triathlon,0,0,0,22.25690831
+Alexander Bryukhankov,RUS,male,28,1.84,79,triathlon,0,0,0,23.33412098
+Alexandra Razarenova,RUS,female,25,1.68,56,triathlon,0,0,0,19.84126984
+Alistair Brownlee,GBR,male,27,1.84,70,triathlon,1,0,0,20.6758034
+Amelie Kretz,CAN,female,22,1.68,53,triathlon,0,0,0,18.77834467
+Anastasia Abrosimova,RUS,female,25,1.64,51,triathlon,0,0,0,18.96192742
+Andrea Hewitt,NZL,female,33,1.6,50,triathlon,0,0,0,19.53125
+Andrea Salvisberg,SUI,male,27,1.8,73,triathlon,0,0,0,22.5308642
+Andreas Schilling,DEN,male,24,1.85,70,triathlon,0,0,0,20.45288532
+Andrew Yorke,CAN,male,27,1.9,75,triathlon,0,0,0,20.77562327
+Anna Maria Mazzetti,ITA,female,27,1.61,50,triathlon,0,0,0,19.28937927
+Anne Haug,GER,female,33,1.64,51,triathlon,0,0,0,18.96192742
+Ashleigh Gentle,AUS,female,25,1.71,52,triathlon,0,0,0,17.78324955
+Audrey Merle,FRA,female,20,1.53,45,triathlon,0,0,0,19.22337562
+Barbara Riveros,CHI,female,28,1.57,46,triathlon,0,0,0,18.66201469
+Ben Kanute,USA,male,23,1.83,70,triathlon,0,0,0,20.90238586
+Bryan Keane,IRL,male,35,1.75,65,triathlon,0,0,0,21.2244898
+Carolina Routier,ESP,female,25,1.72,60,triathlon,0,0,0,20.2812331
+Cassandre Beaugrand,FRA,female,18,1.77,54,triathlon,0,0,0,17.23642631
+Cecilia Perez,MEX,female,24,1.65,53,triathlon,0,0,0,19.46740129
+Charlotte Bonin,ITA,female,29,1.73,60,triathlon,0,0,0,20.04744562
+Claire Michel,BEL,female,27,1.68,54,triathlon,0,0,0,19.13265306
+Claudia Rivas,MEX,female,26,1.71,56,triathlon,0,0,0,19.15119182
+Crisanto Grajales,MEX,male,28,1.66,60,triathlon,0,0,0,21.77384236
+Davide Uccellari,ITA,male,24,1.85,64,triathlon,0,0,0,18.69978086
+Diogo Sclebin,BRA,male,33,1.9,80,triathlon,0,0,0,22.16066482
+Dmitry Polyanskiy,RUS,male,29,1.82,69,triathlon,0,0,0,20.83081753
+Dorian Coninx,FRA,male,22,1.81,70,triathlon,0,0,0,21.36686914
+Elizabeth Bravo,ECU,female,29,1.6,49,triathlon,0,0,0,19.140625
+Emma Moffatt,AUS,female,31,1.71,57,triathlon,0,0,0,19.49317739
+Erin Densham,AUS,female,30,1.65,52,triathlon,0,0,0,19.10009183
+Fa Quan Bai,CHN,male,30,1.73,66,triathlon,0,0,0,22.05219018
+Fabienne St Louis,MRI,female,28,1.71,55,triathlon,0,0,0,18.80920625
+Fernando Alarza,ESP,male,25,1.78,67,triathlon,0,0,0,21.14631991
+Flora Duffy,BER,female,28,1.63,57,triathlon,0,0,0,21.45357371
+Gabor Faldum,HUN,male,27,1.72,64,triathlon,0,0,0,21.63331531
+Gillian Sanders,RSA,female,34,1.68,53,triathlon,0,0,0,18.77834467
+Gonzalo Raul Tellechea,ARG,male,30,1.74,61,triathlon,0,0,0,20.14797199
+Gordon Benson,GBR,male,21,1.91,78,triathlon,0,0,0,21.38099285
+Greg Billington,USA,male,26,1.76,65,triathlon,0,0,0,20.9839876
+Gwen Jorgensen,USA,female,29,1.78,58,triathlon,1,0,0,18.30576947
+Helen Jenkins,GBR,female,32,1.69,55,triathlon,0,0,0,19.25702882
+Henri Schoeman,RSA,male,24,1.7,59,triathlon,0,0,1,20.41522491
+Hirokatsu Tayama,JPN,male,34,1.67,62,triathlon,0,0,0,22.23098713
+Igor Polyanskiy,RUS,male,26,1.91,72,triathlon,0,0,0,19.73630109
+Irving Perez,MEX,male,29,1.75,64,triathlon,0,0,0,20.89795918
+Ivan Ivanov,UKR,male,27,1.83,67,triathlon,0,0,0,20.00656932
+Jason Wilson,BAR,male,25,1.8,68,triathlon,0,0,0,20.98765432
+Jelle Geens,BEL,male,22,1.72,61,triathlon,0,0,0,20.61925365
+Joao Pereira,POR,male,28,1.86,72,triathlon,0,0,0,20.81165453
+Joao Silva,POR,male,26,1.71,60,triathlon,0,0,0,20.51913409
+Joe Maloy,USA,male,30,1.76,64,triathlon,0,0,0,20.66115702
+Jolanda Annen,SUI,female,23,1.66,56,triathlon,0,0,0,20.32225287
+Jonathan Brownlee,GBR,male,25,1.81,70,triathlon,0,1,0,21.36686914
+Julia Hauser,AUT,female,22,1.63,48,triathlon,0,0,0,18.06616734
+Kaidi Kivioja,EST,female,23,1.76,61,triathlon,0,0,0,19.69266529
+Katie Zaferes,USA,female,26,1.73,58,triathlon,0,0,0,19.37919743
+Katrien Verstuyft,BEL,female,33,1.7,61,triathlon,0,0,0,21.10726644
+Kirsten Sweetland,CAN,female,27,1.63,49,triathlon,0,0,0,18.44254582
+Kristian Blummenfelt,NOR,male,22,1.77,76,triathlon,0,0,0,24.25867407
+Laura Lindemann,GER,female,19,1.68,57,triathlon,0,0,0,20.19557823
+Lawrence Fanous,JOR,male,30,1.7,61,triathlon,0,0,0,21.10726644
+Leonardo Chacon,CRC,male,31,1.79,65,triathlon,0,0,0,20.28650791
+Lian Yuan Wang,CHN,female,21,1.67,60,triathlon,0,0,0,21.51385851
+Lisa Norden,SWE,female,31,1.76,60,triathlon,0,0,0,19.36983471
+Luciano Taccone,ARG,male,26,1.76,63,triathlon,0,0,0,20.33832645
+Manuel Huerta,PUR,male,32,1.68,56,triathlon,0,0,0,19.84126984
+Margit Vanek,HUN,female,30,1.78,58,triathlon,0,0,0,18.30576947
+Mari Rabie,RSA,female,29,1.71,60,triathlon,0,0,0,20.51913409
+Mariia Shorets,RUS,female,25,1.66,55,triathlon,0,0,0,19.95935549
+Mario Mola,ESP,male,26,1.78,63,triathlon,0,0,0,19.88385305
+Marten van Riel,BEL,male,23,1.83,64,triathlon,0,0,0,19.11075278
+Mateja Simic,SLO,female,36,1.69,58,triathlon,0,0,0,20.30741221
+Miguel Arraiolos,POR,male,27,1.73,62,triathlon,0,0,0,20.71569381
+Miriam Casillas Garcia,ESP,female,23,1.64,52,triathlon,0,0,0,19.33372992
+Nicky Samuels,NZL,female,33,1.7,56,triathlon,0,0,0,19.37716263
+Nicola Spirig Hug,SUI,female,34,1.66,54,triathlon,0,1,0,19.59645812
+Non Stanford,GBR,female,27,1.7,55,triathlon,0,0,0,19.03114187
+Pamella Oliveira,BRA,female,28,1.65,60,triathlon,0,0,0,22.03856749
+Pierre Le Corre,FRA,male,26,1.76,65,triathlon,0,0,0,20.9839876
+Rachel Klamer,NED,female,25,1.66,51,triathlon,0,0,0,18.507766
+Richard Murray,RSA,male,27,1.8,70,triathlon,0,0,0,21.60493827
+Richard Varga,SVK,male,27,1.88,65,triathlon,0,0,0,18.39067451
+Rodrigo Gonzalez,MEX,male,26,1.8,69,triathlon,0,0,0,21.2962963
+Ron Darmon,ISR,male,23,1.75,65,triathlon,0,0,0,21.2244898
+Rostyslav Pevtsov,AZE,male,28,1.87,74,triathlon,0,0,0,21.16160027
+Ryan Bailie,AUS,male,25,1.77,61,triathlon,0,0,0,19.47077787
+Ryan Fisher,AUS,male,24,1.73,64,triathlon,0,0,0,21.383942
+Ryan Sissons,NZL,male,27,1.75,62,triathlon,0,0,0,20.24489796
+Sara Vilic,AUT,female,23,1.7,55,triathlon,0,0,0,19.03114187
+Sarah True,USA,female,34,1.71,60,triathlon,0,0,0,20.51913409
+Sarah-Anne Brault,CAN,female,26,1.71,65,triathlon,0,0,0,22.22906193
+Sven Riederer,SUI,male,34,1.82,69,triathlon,0,0,0,20.83081753
+Tamas Toth,HUN,male,26,1.75,65,triathlon,0,0,0,21.2244898
+Thomas Springer,AUT,male,31,1.84,70,triathlon,0,0,0,20.6758034
+Tony Dodds,NZL,male,28,1.83,68,triathlon,0,0,0,20.30517483
+Tyler Mislawchuk,CAN,male,21,1.72,59,triathlon,0,0,0,19.94321255
+Vendula Frintova,CZE,female,32,1.68,50,triathlon,0,0,0,17.7154195
+Vicente Hernandez,ESP,male,24,1.81,74,triathlon,0,0,0,22.58783309
+Vicky Holland,GBR,female,30,1.68,56,triathlon,0,0,1,19.84126984
+Vincent Luis,FRA,male,26,1.77,65,triathlon,0,0,0,20.74755019
+Yuka Sato,JPN,female,24,1.71,56,triathlon,0,0,0,19.15119182
+Yuliya Yelistratova,UKR,female,28,1.63,53,triathlon,0,0,0,19.94805977
+Yurie Kato,JPN,female,29,1.61,48,triathlon,0,0,0,18.5178041
+Zsofia Kovacs,HUN,female,28,1.8,58,triathlon,0,0,0,17.90123457
