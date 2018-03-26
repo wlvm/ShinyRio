@@ -3,13 +3,12 @@ library(shiny)
 library(DT)
 library(plotly)
 library(crosstalk)
-library(ggcorrplot)
 library(ggplot2)
 library(stats)
 
 
 # First read the datasets
-athletes <- readRDS("data/athletes2016.rds")
+#athletes <- readRDS("data/athletes2016.rds")
 triathletes <- readRDS("data/triathletes2016.rds")
 m <- triathletes %>% 
   tibble::rownames_to_column()
@@ -62,10 +61,12 @@ ui <- fluidPage(
                              so. Hopefully you enjoyed it!"),
                            br(),
                            h3("Usage:"),
-                           p("Use the side panel to control the histogram displayed, and click on the tabs to explore some stats. Use the Data Table tab 
-                              to see, search and sort data. You can also filter data by selecting rows with your moust. Lastly, you can 
-                              export the selected rows to a csv file
-                              by clicking on the button at the bottom of the data table."), 
+                           p("- Use the side panel to control the histogram displayed, and click on the tabs to explore some stats."),
+                           p("- Use the Data Table tab to see, search and sort data. You can also filter data by selecting rows with your moust. You can 
+                              download the selected rows to a csv file
+                              by clicking on the button at the bottom of the data table."),
+                           p("- In the Extras tab you can calculate your BMI (Body Mass Index) and 
+                             compare it to Olympic triathletes."), 
                            h3("Data:"),
                            p("The data and images were sourced from the official ",
                              a("Rio 2016 website.", 
@@ -75,31 +76,52 @@ ui <- fluidPage(
                            HTML('<center><img src="Gwen.png"></center>')
                            ),
                   tabPanel("Histogram", plotOutput("histoPlot")),  
+                
+                  tabPanel("Data Table",
+                          #data table and scatter graph with selection
+                          br(),
+                          p("The Olympic triathlon: 1500m swim, 40km bike (drafting allowed), 10km run. What does it take to get to the Olympics? Here is 
+                             the data! Also see the Extras tab to compare."),
+                          br(),
+                          plotlyOutput("x2"),
+                          helpText("Select a row with your mouse. Selected athlete is shown as a green data point."),
+                           DT::DTOutput("x1"),
+                           fluidRow(
+                             p(class = 'text-center', downloadButton('x3', 'Download Selected Data'))
+                           )),
                   tabPanel("Countries", 
                            br(),
                            plotlyOutput("piechart"),
                            br(),
                            helpText("Hover over the Olympic Ring! Scroll down the legend to see all countries.")),
-                  tabPanel("Data Table",
-                          #data table and scatter graph with selection
+                  tabPanel("Extras",
                            br(),
-                           p("The Olympic triathlon: 1500m swim, 40km bike (drafting allowed), 10km run. What does it take to get to the Olympics? Here is 
-                             the data!"),
+                           p("How do you compare to an Olympic triathlete?"),
+                           numericInput("yourmass", label = em("Your weight:"),
+                                        value = 65
+                           ),
+                           numericInput("yourheight", label = em("Your height:"),
+                                        value = 1.75,
+                                        step  = 0.10
+                           ),
+                           uiOutput("YourInput"),
                            br(),
-                           plotlyOutput("x2"),
-                           helpText("Select a row with your mouse. Selected athlete is shown as a green data point."),
-                           DT::DTOutput("x1"),
-                           fluidRow(
-                             p(class = 'text-center', downloadButton('x3', 'Download Selected Data'))
+                           actionButton("Calculate", "Calculate and Compare"),
+                           br(),
+                           br(),
+                           uiOutput("BMIresult"),
+                           br(),
+                           plotlyOutput("BMIplot")
                            )
-                           )                        
       )
       
     )
   )
 )
 
+############################### END of UI ####################################
 
+##################### Start of Server code ###################################
 
 server <- function(input, output) {
   ## HISTOGRAM TAB
@@ -188,6 +210,51 @@ server <- function(input, output) {
              xaxis = list(showgrid = FALSE, zeroline = FALSE, showticklabels = FALSE),
              yaxis = list(showgrid = FALSE, zeroline = FALSE, showticklabels = FALSE))
   })
+  
+  #EXTRAS TAB
+  # output$input <- renderText({
+  #   paste0("You are ", "<strong>",input$yourmass, " kg", " @ ", input$yourheight, " m", "</strong>")
+  # })
+  
+  output$YourInput <- renderText({
+    paste0("You are ", "<strong>",input$yourmass, " kg", " @ ", input$yourheight, " m", "</strong>")
+  })
+  
+  
+  
+  resultprint_next <- eventReactive(input$Calculate, {
+    
+    bmi <-input$yourmass / (input$yourheight^2)
+    
+    if      (bmi <  15.0) info = "<span style='color: red'>Very severely underweight</span>"
+    else if (bmi <= 16.0) info = "<span style='color: red'>Severely underweight</span>"
+    else if (bmi <= 18.5) info = "<span style='color: orange'>Underweight</span>"
+    else if (bmi <= 25.0) info = "<span style='color: green'>Normal (healthy weight)</span>"
+    else if (bmi <= 30.0) info = "<span style='color: orange'>Overweight</span>"
+    else if (bmi <= 35.0) info = "<span style='color: red'>Obese Class I (Moderately obese)</span>"
+    else if (bmi <= 40.0) info = "<span style='color: red'>Obese Class II (Severely obese)</span>"
+    else                  info = "<span style='color: red'>Obese Class III (Very severely obese)</span>"
+    
+    paste0("Your BMI is ", "<code>", round(bmi, 2), "</code>", ", which is: ", info)
+    # p <- plot_ly(triathletes, x = ~Age, y = ~BMI, name = 'Olympic Triathletes', type = 'scatter', mode = 'markers') %>%
+    #   add_trace(y = bmi, name = 'Your BMI', mode = 'lines') 
+    
+  })
+  output$BMIresult <- renderText({
+    resultprint_next()
+    
+  })
+  resultplot_next <- eventReactive(input$Calculate, {
+    
+      p <- plot_ly(triathletes, x = ~Age, y = ~BMI, name = 'Olympic Triathletes', type = 'scatter', mode = 'markers') %>%
+        add_trace(y = input$yourmass / (input$yourheight^2), name = 'Your BMI', mode = 'lines')
+      
+  })
+  output$BMIplot <- renderPlotly({
+    resultplot_next()
+  })
+  
+    # 
 }
 # Run the application 
 shinyApp(ui, server)
