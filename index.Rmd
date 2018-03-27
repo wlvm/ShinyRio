@@ -1,0 +1,74 @@
+---
+title       : "The Shiny Rio Triathletes app"
+subtitle    : "27 March 2018"
+author      : "wlvm"
+date        : 27-03-2018
+widgets     : [bootstrap, mathjax, interactive, plotly]
+ext_widgets : {rCharts: [libraries/nvd3, libraries/leaflet, libraries/dygraphs]}
+mode        : selfcontained # {standalone, draft}
+logo        : Rio.png
+#logo     : OlympicRings.png
+knit        : slidify::knit2slides
+---
+
+
+
+
+## About
+
+- Learn more about the *2016 Olympic triathletes* with this app [here](https://wlvm.shinyapps.io/shinyRio/) and on [github](https://github.com/wlvm/ShinyRio)
+- Have fun randomly rendering their home countries on a map
+- Check if your *Body Mass Index* (BMI) is like that of a swim-bike-runner!
+
+<img src="https://stillmed.olympic.org/media/Images/OlympicOrg/News/2016/09/07/2016-09-07-triathlon-inside-02.jpg" 
+  width=45% alt="The Brownlee brothers" class="center">
+
+Upfront credit goes to: [Rio Olympics website](https://www.rio2016.com/) for data, logos and photo of the Brownlee brothers. 
+Photo credits go to New York Times for title photo of my hero [Gwen Jorgenson](http://www.gwenjorgensen.com/).
+
+
+---
+
+
+## Triathlete country distribution (with plotly)
+```{r echo=F, opts.label = 'interactive', results = 'asis', dpi=67}
+library(plotly)
+triathletes <- readRDS("assets/data/triathletes2016.rds")
+pietri <- triathletes %>%
+      group_by(Nationality) %>%
+      summarise(count = n()) %>%
+      plot_ly(labels = ~Nationality, values = ~count,textinfo = "none") %>%
+      add_pie(hole = 0.6) %>%
+      layout(title = "Country Ring of Triathletes",  showlegend = T,
+             xaxis = list(showgrid = FALSE, zeroline = FALSE, showticklabels = FALSE),
+             yaxis = list(showgrid = FALSE, zeroline = FALSE, showticklabels = FALSE))
+pietri
+```
+
+---
+
+## Distribution of triathletes (Age and BMI)
+```{r echo=F, opts.label = 'interactive', results = 'asis'}
+p <- plot_ly(alpha = 0.6) %>%
+  add_histogram(x = ~triathletes$BMI,  name = 'Nationality') %>%
+  add_histogram(x = ~triathletes$Age,name = 'Age') %>%
+  layout(barmode = "overlay") 
+p
+```
+
+
+--- 
+
+
+## Scatterplot of normal person vs super triathlete
+
+```{r echo=F, opts.label = 'interactive', results = 'asis', dpi=70}
+p <- plot_ly(triathletes, x = ~Age, y = ~BMI, name = 'Olympic Triathletes', 
+      type = 'scatter', mode = 'markers') %>%
+    add_trace(y = 25, name = 'Normal Dude', mode = 'lines')
+p
+```
+
+
+
+

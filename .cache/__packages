@@ -1,0 +1,16 @@
+base
+devtools
+slidifyLibraries
+slidify
+rsconnect
+DT
+ggplot2
+plotly
+crosstalk
+ggcorrplot
+leaflet
+bindrcpp
+shiny
+dplyr
+webshot
+sp
